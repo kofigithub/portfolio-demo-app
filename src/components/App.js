@@ -1,6 +1,7 @@
 
 import { Routes, Route } from "react-router-dom";
 import Home from '../routes/Home';
+import PortfolioDemoApp from '../routes/PortfolioDemoApp';
 import AboutMe from '../routes/AboutMe';
 import Mission from '../routes/Mission';
 import Vision from '../routes/Vision';
@@ -30,6 +31,7 @@ const App = () => {
 	  
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+		  <Route path="portfolio-demo-app" element={<PortfolioDemoApp />} />
 		  <Route path="about-me" element={<AboutMe />} />
 		  <Route path="mission" element={<Mission />} />
 		  <Route path="vision" element={<Vision />} />
@@ -45,10 +47,6 @@ const App = () => {
 		  <Route path="video2" element={<Video2 />} />
 		  <Route path="contact" element={<ContactMe />} />
           <Route path="*" element={<p>Not found!</p>} />
-		  <Route path='/started' element={<Started />} />
-          <Route path='/calendar' element={<Blank />} />
-          <Route path='/user' element={<Blank />} />
-          <Route path='/order' element={<Blank />} />
         </Route>
       </Routes>
     </>

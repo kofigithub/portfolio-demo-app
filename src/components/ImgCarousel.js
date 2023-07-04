@@ -49,7 +49,7 @@ const imageData = [
 
 const renderSlides = imageData.map((image) => (
   <div key={image.alt}>
-    <a href={image.siteUrl}><img src={image.url} alt={image.alt} width='600' height='340' /></a>
+    <img src={image.url} alt={image.alt} width='600' height='340' />
     <p className="legend">{image.label}</p>
   </div>
 ));
@@ -74,6 +74,8 @@ export default function ImgCarousel() {
         selectedItem={imageData[currentIndex]}
         onChange={handleChange}
         className="carousel-container"
+		preventMovementUntilSwipeScrollTolerance={true}
+        swipeScrollTolerance={50}
       >
         {renderSlides}
       </Carousel>
