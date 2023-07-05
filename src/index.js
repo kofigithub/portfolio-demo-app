@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import "./components/indexList.css";
 import Footer from "./components/Footer";
 import reportWebVitals from "./components/reportWebVitals";
-import ImgCarousel from "./components/ImgCarousel";
+//import ImgCarousel from "./components/ImgCarousel";
+import MultiCarousel from "./components/MultiCarousel";
 import Navbar from './components/Navbar';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
    
   <React.StrictMode>
-  <div align="center"><ImgCarousel/></div>
+  <div align="center"><MultiCarousel /></div>
     <BrowserRouter>
 	<div className="nav-area">
         <Link to="/" className="logo">         
