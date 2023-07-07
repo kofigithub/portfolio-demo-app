@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import ReactDOM from "react-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Header from "./Header";
@@ -96,13 +95,16 @@ class MultiCarousel extends Component {
 			  autoPlaySpeed={3000}
 			  centerMode={true}
 			  className=""
-			  containerClass="container-with-dots"
+			  containerClass="container"
 			  dotListClass=""
 			  draggable
+			  swipeable
 			  focusOnSelect={false}
 			  infinite
 			  itemClass=""
+			  partialVisible={false}
 			  keyBoardControl
+			  pauseOnHover
 			  minimumTouchDrag={80}
 			  renderButtonGroupOutside={false}
 			  renderDotsOutside={false}
@@ -111,7 +113,7 @@ class MultiCarousel extends Component {
                   return (
                     <div className="card text-left mt-5" key={index}>
                       <img
-                        style={{ height: "100px" }}
+                        style={{marginLeft:"0px",marginRight:"0px",display:"flex",jutifyContent:"center", height: "150px",width: "330px" }}
                         src={post.urlToImage}
                         alt="Alt text"
                       />
@@ -119,7 +121,7 @@ class MultiCarousel extends Component {
                         <h5 className="card-title">{post.label}</h5>
                         <p className="card-text">{post.label}</p>
                         <a
-                          href={post.url}
+                          href={post.siteUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
